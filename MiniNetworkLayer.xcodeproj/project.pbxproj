@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,13 @@
 		3B15162324AE223600C2CE23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B15162224AE223600C2CE23 /* Assets.xcassets */; };
 		3B15162624AE223600C2CE23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B15162524AE223600C2CE23 /* Preview Assets.xcassets */; };
 		3B15162924AE223600C2CE23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B15162724AE223600C2CE23 /* LaunchScreen.storyboard */; };
+		3B15163224AE226800C2CE23 /* JSONPlaceholderTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15163124AE226800C2CE23 /* JSONPlaceholderTodo.swift */; };
+		3B15163424AE229500C2CE23 /* JSONPlaceholderCreatePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15163324AE229500C2CE23 /* JSONPlaceholderCreatePost.swift */; };
+		3B15163924AE243600C2CE23 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15163824AE243600C2CE23 /* Service.swift */; };
+		3B15163B24AE244800C2CE23 /* ServiceMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15163A24AE244800C2CE23 /* ServiceMethod.swift */; };
+		3B15163D24AE2CF000C2CE23 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15163C24AE2CF000C2CE23 /* ServiceProvider.swift */; };
+		3B15164024AE2D6100C2CE23 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B15163F24AE2D6100C2CE23 /* PromiseKit */; };
+		3B15164224AE31AB00C2CE23 /* JSONPlaceholderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15164124AE31AB00C2CE23 /* JSONPlaceholderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,12 @@
 		3B15162524AE223600C2CE23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B15162824AE223600C2CE23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B15162A24AE223600C2CE23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B15163124AE226800C2CE23 /* JSONPlaceholderTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderTodo.swift; sourceTree = "<group>"; };
+		3B15163324AE229500C2CE23 /* JSONPlaceholderCreatePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderCreatePost.swift; sourceTree = "<group>"; };
+		3B15163824AE243600C2CE23 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		3B15163A24AE244800C2CE23 /* ServiceMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMethod.swift; sourceTree = "<group>"; };
+		3B15163C24AE2CF000C2CE23 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		3B15164124AE31AB00C2CE23 /* JSONPlaceholderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B15164024AE2D6100C2CE23 /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +70,8 @@
 		3B15161B24AE223500C2CE23 /* MiniNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				3B15163524AE22B500C2CE23 /* Networking */,
+				3B15163024AE225200C2CE23 /* Codables */,
 				3B15161C24AE223500C2CE23 /* AppDelegate.swift */,
 				3B15161E24AE223500C2CE23 /* SceneDelegate.swift */,
 				3B15162024AE223500C2CE23 /* ContentView.swift */,
@@ -75,6 +91,42 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3B15163024AE225200C2CE23 /* Codables */ = {
+			isa = PBXGroup;
+			children = (
+				3B15163124AE226800C2CE23 /* JSONPlaceholderTodo.swift */,
+				3B15163324AE229500C2CE23 /* JSONPlaceholderCreatePost.swift */,
+			);
+			path = Codables;
+			sourceTree = "<group>";
+		};
+		3B15163524AE22B500C2CE23 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3B15163724AE242800C2CE23 /* Services */,
+				3B15163624AE242100C2CE23 /* Architecture */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3B15163624AE242100C2CE23 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				3B15163824AE243600C2CE23 /* Service.swift */,
+				3B15163A24AE244800C2CE23 /* ServiceMethod.swift */,
+				3B15163C24AE2CF000C2CE23 /* ServiceProvider.swift */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		3B15163724AE242800C2CE23 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3B15164124AE31AB00C2CE23 /* JSONPlaceholderService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,6 +143,9 @@
 			dependencies = (
 			);
 			name = MiniNetworkLayer;
+			packageProductDependencies = (
+				3B15163F24AE2D6100C2CE23 /* PromiseKit */,
+			);
 			productName = MiniNetworkLayer;
 			productReference = 3B15161924AE223500C2CE23 /* MiniNetworkLayer.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +174,9 @@
 				Base,
 			);
 			mainGroup = 3B15161024AE223500C2CE23;
+			packageReferences = (
+				3B15163E24AE2D6100C2CE23 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+			);
 			productRefGroup = 3B15161A24AE223500C2CE23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,9 +204,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B15163424AE229500C2CE23 /* JSONPlaceholderCreatePost.swift in Sources */,
 				3B15161D24AE223500C2CE23 /* AppDelegate.swift in Sources */,
 				3B15161F24AE223500C2CE23 /* SceneDelegate.swift in Sources */,
 				3B15162124AE223500C2CE23 /* ContentView.swift in Sources */,
+				3B15163D24AE2CF000C2CE23 /* ServiceProvider.swift in Sources */,
+				3B15163B24AE244800C2CE23 /* ServiceMethod.swift in Sources */,
+				3B15163224AE226800C2CE23 /* JSONPlaceholderTodo.swift in Sources */,
+				3B15163924AE243600C2CE23 /* Service.swift in Sources */,
+				3B15164224AE31AB00C2CE23 /* JSONPlaceholderService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +404,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B15163E24AE2D6100C2CE23 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.13.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B15163F24AE2D6100C2CE23 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B15163E24AE2D6100C2CE23 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B15161124AE223500C2CE23 /* Project object */;
 }
