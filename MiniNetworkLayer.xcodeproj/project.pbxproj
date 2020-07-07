@@ -20,6 +20,8 @@
 		3B15163D24AE2CF000C2CE23 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15163C24AE2CF000C2CE23 /* ServiceProvider.swift */; };
 		3B15164024AE2D6100C2CE23 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B15163F24AE2D6100C2CE23 /* PromiseKit */; };
 		3B15164224AE31AB00C2CE23 /* JSONPlaceholderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15164124AE31AB00C2CE23 /* JSONPlaceholderService.swift */; };
+		3B15164424AE5C8000C2CE23 /* ResponseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15164324AE5C8000C2CE23 /* ResponseCodable.swift */; };
+		3B15164624AE5D2200C2CE23 /* JSON+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B15164524AE5D2200C2CE23 /* JSON+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		3B15163A24AE244800C2CE23 /* ServiceMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMethod.swift; sourceTree = "<group>"; };
 		3B15163C24AE2CF000C2CE23 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		3B15164124AE31AB00C2CE23 /* JSONPlaceholderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderService.swift; sourceTree = "<group>"; };
+		3B15164324AE5C8000C2CE23 /* ResponseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodable.swift; sourceTree = "<group>"; };
+		3B15164524AE5D2200C2CE23 /* JSON+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSON+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		3B15161B24AE223500C2CE23 /* MiniNetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				3B15164524AE5D2200C2CE23 /* JSON+Extensions.swift */,
 				3B15163524AE22B500C2CE23 /* Networking */,
 				3B15163024AE225200C2CE23 /* Codables */,
 				3B15161C24AE223500C2CE23 /* AppDelegate.swift */,
@@ -105,6 +110,7 @@
 			children = (
 				3B15163724AE242800C2CE23 /* Services */,
 				3B15163624AE242100C2CE23 /* Architecture */,
+				3B15164324AE5C8000C2CE23 /* ResponseCodable.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 				3B15163B24AE244800C2CE23 /* ServiceMethod.swift in Sources */,
 				3B15163224AE226800C2CE23 /* JSONPlaceholderTodo.swift in Sources */,
 				3B15163924AE243600C2CE23 /* Service.swift in Sources */,
+				3B15164424AE5C8000C2CE23 /* ResponseCodable.swift in Sources */,
+				3B15164624AE5D2200C2CE23 /* JSON+Extensions.swift in Sources */,
 				3B15164224AE31AB00C2CE23 /* JSONPlaceholderService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

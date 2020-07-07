@@ -8,9 +8,20 @@
 
 import Foundation
 
-struct JSONPlaceholderTodo: Decodable {
+struct JSONPlaceholderTodo: ResponseDecodable {
   let userId: Int
   let id: Int
   let title: String
   let completed: Bool
+
+  static var sampleJSON: String {
+    """
+    {
+    "userId": 1,
+    "id": 0,
+    "title": "Get milk and eggs",
+    "completed": false
+    }
+    """
+  }
 }

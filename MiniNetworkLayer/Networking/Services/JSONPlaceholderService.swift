@@ -8,7 +8,9 @@
 
 import Foundation
 
-enum JSONPlaceholderService {
+enum JSONPlaceholderService<T> where T: ResponseDecodable {
+  typealias ResponseType = T
+
   case getTodo(Int)
   case createPost(JSONPlaceholderCreatePost)
 }

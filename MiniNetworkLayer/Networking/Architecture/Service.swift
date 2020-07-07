@@ -9,6 +9,9 @@
 import Foundation
 
 protocol Service {
+  /// ResponseType is a type that is provided by a conforming Service as the type to be used when parsing the response.
+  associatedtype ResponseType: ResponseDecodable
+
   var baseURL: String { get }
   var path: String { get }
   var parameters: [String: Any]? { get }

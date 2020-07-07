@@ -40,13 +40,11 @@ struct ContentView_Previews: PreviewProvider {
 class ViewModel: ObservableObject {
   @Published private(set) var model: JSONPlaceholderTodo?
   var shouldShowTodo: Bool { model != nil }
-
-  private let provider = ServiceProvider<JSONPlaceholderService>()
+  private let provider = ServiceProvider()
 
   func onLoad() {
-    print("starting to load...")
-    provider.loadDecodable(service: .getTodo(1), decodeType: JSONPlaceholderTodo.self)
-      .done { print("successfully loaded"); self.model = $0 }
+    provider.load(service: JSONPlaceholderService<JSONPlaceholderTodo>.getTodo(1))
+      .done { self.model = $0 }
       .catch { print("error: \($0.localizedDescription)") }
   }
 }

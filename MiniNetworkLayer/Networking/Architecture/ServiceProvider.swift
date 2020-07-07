@@ -13,18 +13,14 @@ enum NetworkError: Error {
   case unknown
 }
 
-class ServiceProvider<T> where T: Service {
+class ServiceProvider {
   let urlSession = URLSession.shared
 
-  func load(service: T) -> Promise<Data> {
+  func load<ServiceType>(service: ServiceType) -> Promise<ServiceType.ResponseType> where ServiceType: Service {
     call(service.urlRequest)
-  }
-
-  func loadDecodable<ResponseType>(service: T, decodeType: ResponseType.Type) -> Promise<ResponseType> where ResponseType: Decodable {
-    call(service.urlRequest)
-      .then { (data) -> Promise<ResponseType> in
+      .then { (data) -> Promise<ServiceType.ResponseType> in
         do {
-          let object = try JSONDecoder().decode(decodeType.self, from: data)
+          let object = try ServiceType.ResponseType.decoder.decode(ServiceType.ResponseType.self, from: data)
           return .value(object)
         } catch {
           throw error
